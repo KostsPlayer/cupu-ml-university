@@ -1,0 +1,24 @@
+@use "./helper/mixin" as m;
+@use "./helper/variables" as v;
+@use "./component/Navbar/navbar";
+@use "./component/Footer/footer";
+@use "./pages/Home/Hero/hero";
+@use "./pages/Home/About/about";
+@use "./pages/Home/Advantage/advantage";
+@use "./pages/Home/Courses/courses";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap&family=Patua+One");
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+  color: v.$black;
+  font-weight: 500;
+}

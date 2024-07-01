@@ -1,0 +1,32 @@
+@use "./variables" as v;
+
+@mixin flex($align: center, $justify: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin logo($color: v.$black) {
+  font-family: "Patua One", serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: $color;
+}
+
+@mixin title() {
+  @include flex($direction: column);
+  gap: 0.9rem;
+
+  .text {
+    font-size: 1.7rem;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .line {
+    width: 4.5rem;
+    height: 0.4rem;
+    background-color: v.$dark-red;
+  }
+}

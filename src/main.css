@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap&family=Patua+One");
+.navbar {
+  width: 100%;
+  height: 9.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1.8rem;
+  gap: 0.8rem;
+}
+.navbar-logo {
+  font-family: "Patua One", serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: #020202;
+}
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  height: auto;
+  width: 100%;
+}
+.navbar-list .link {
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 100%;
+}
+.navbar-list .link.active {
+  color: #e02b56;
+}
+.navbar-list .link::after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #e02b56;
+  transition: all 0.6s ease-in-out;
+  transform-origin: center;
+  transform: scaleX(0);
+  bottom: 0;
+}
+.navbar-list .link:hover::after {
+  content: "";
+  display: block;
+  transform: scaleX(1);
+}
+
+.footer {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #020202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4.2rem;
+  padding: 4.8rem 0 4.2rem;
+}
+.footer-logo {
+  font-family: "Patua One", serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: #fff;
+}
+.footer-other {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 4.8rem;
+  align-items: flex-start;
+  padding: 0 5.6rem;
+}
+.footer-other .quotes {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-other .quotes .who {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footer-other .quotes .content {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.footer-other .quotes .reason {
+  width: 100%;
+}
+.footer-other .quotes span {
+  color: #fff;
+}
+.footer-other .courses {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer-other .courses .title {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.footer-other .courses-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.footer-other .courses-list-link {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-other .courses-list-link::after {
+  content: "";
+  margin-top: 0.2rem;
+  display: block;
+  width: 0;
+  height: 0.15rem;
+  background-color: #e02b56;
+  transition: all 0.6s ease-in-out;
+  bottom: 0;
+}
+.footer-other .courses-list-link:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+}
+.footer-other .contact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer-other .contact .title {
+  color: #fff;
+  font-family: "Montserrat", "sans-serif";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footer-other .contact-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.footer-other .contact-list .item {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "icon subtitle" "text text";
+  align-items: center;
+  gap: 0.2rem 0.4rem;
+}
+.footer-other .contact-list .item .material-symbols-rounded {
+  grid-area: icon;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #e02b56;
+}
+.footer-other .contact-list .item .subtitle {
+  grid-area: subtitle;
+  font-weight: 700;
+  color: #fff;
+}
+.footer-other .contact-list .item .text {
+  grid-area: text;
+  color: #fff;
+}
+.footer-line {
+  background-color: #fff;
+  width: 100%;
+  height: 0.05rem;
+}
+.footer-copyright {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 5.6rem;
+}
+.footer-copyright span {
+  color: #fff;
+  font-weight: 600;
+}
+.footer-copyright span .symbol {
+  font-weight: 800;
+}
+
+.hero {
+  width: 100%;
+  min-height: 105vh;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./assets/images/WhatsApp Image 2024-06-30 at 15.47.57_1f23f0d1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(1.5) grayscale(100%);
+}
+.hero .title {
+  width: 40%;
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+  color: #e02b56;
+  text-shadow: 1px 1px 1px #e02b56;
+  font-size: 3.2rem;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+}
+
+.about {
+  width: 100%;
+  min-height: 110vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-info {
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.about-info .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.about-info .title .text {
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.about-info .title .line {
+  width: 4.5rem;
+  height: 0.4rem;
+  background-color: #e02b56;
+}
+.about-info .description {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.about-info .description span {
+  font-weight: 800;
+}
+.about-info .ttd {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 0.8rem;
+}
+.about-info .ttd .text {
+  font-weight: 800;
+}
+.about-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/WhatsApp Image 2024-06-30 at 14.41.15_f1802bae.jpg");
+  background-size: cover;
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  filter: brightness(1.5) grayscale(100%);
+}
+
+.advantage {
+  width: 100%;
+  min-height: 110vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+.advantage::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url("./assets/images/WhatsApp Image 2024-06-30 at 14.58.08_b74b89e1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+.advantage-above {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.advantage-above .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.advantage-above .title .text {
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.advantage-above .title .line {
+  width: 4.5rem;
+  height: 0.4rem;
+  background-color: #e02b56;
+}
+.advantage-above .description {
+  width: 60%;
+  height: auto;
+  text-align: center;
+  font-weight: 800;
+}
+.advantage-below {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 5.4rem;
+  gap: 5.4rem;
+}
+.advantage-below .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  gap: 1.2rem;
+}
+.advantage-below .wrapper .material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #e02b56;
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: 0.1rem solid #e02b56;
+  transition: 0.4s ease-in-out all;
+}
+.advantage-below .wrapper .material-symbols-rounded:hover, .advantage-below .wrapper .material-symbols-rounded:focus {
+  transform: translateY(-0.2rem);
+  background-color: #e02b56;
+  color: #fff;
+}
+.advantage-below .wrapper .subtitle {
+  font-size: 1.025rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.advantage-below .wrapper .note {
+  text-align: center;
+  width: 85%;
+}
+.advantage-below .wrapper button {
+  background-color: transparent;
+  border: 0.1rem solid #e02b56;
+  padding: 0.3rem 0.8rem;
+  font-weight: 600;
+  transition: 0.4s ease-in-out all;
+  background-color: #e02b56;
+  color: #fff;
+}
+.advantage-below .wrapper button:hover, .advantage-below .wrapper button:focus {
+  background-color: transparent;
+  color: #e02b56;
+}
+
+.courses {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.courses-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/WhatsApp Image 2024-06-30 at 14.42.14_b5706b46.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  filter: brightness(1.5) grayscale(100%);
+}
+.courses-info {
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4.4rem;
+  padding: 6.8rem 5.4rem;
+}
+.courses-info-above {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.courses-info-above .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.courses-info-above .title .text {
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.courses-info-above .title .line {
+  width: 4.5rem;
+  height: 0.4rem;
+  background-color: #e02b56;
+}
+.courses-info-above .description {
+  height: auto;
+  text-align: center;
+}
+.courses-info-below {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 4rem 3.6rem;
+}
+.courses-info-below .wrapper {
+  width: 100%;
+  height: auto;
+  display: grid;
+  gap: 0.15rem;
+  padding-bottom: 2.6rem;
+  border-bottom: 0.1rem solid #ddd;
+}
+.courses-info-below .wrapper .year {
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.courses-info-below .wrapper .content {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.courses-info-below .wrapper .price {
+  margin-top: 0.6rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+.courses-info-all {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  padding: 0.7rem 1.2rem;
+  background-color: #e02b56;
+  color: #fff;
+  text-align: center;
+  border: 0.15rem #e02b56 solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.4s ease-in-out;
+}
+.courses-info-all:hover, .courses-info-all:focus {
+  background-color: transparent;
+  color: #e02b56;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+  color: #020202;
+  font-weight: 500;
+}

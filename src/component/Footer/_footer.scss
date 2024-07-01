@@ -1,0 +1,174 @@
+@use "./../../helper/mixin" as m;
+@use "./../../helper/variables" as v;
+
+.footer {
+  width: 100%;
+  min-height: 80vh;
+  background-color: v.$black;
+  @include m.flex($direction: column);
+  gap: 4.2rem;
+  padding: 4.8rem 0 4.2rem;
+
+  &-logo {
+    @include m.logo($color: #fff);
+  }
+
+  &-other {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4.8rem;
+    align-items: flex-start;
+    padding: 0 5.6rem;
+
+    .quotes {
+      width: 100%;
+      height: auto;
+      @include m.flex($direction: column, $align: flex-start);
+      gap: 1.5rem;
+
+      .who {
+        font-family: "Montserrat", "sans-serif";
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .content {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .reason {
+        width: 100%;
+      }
+
+      span {
+        color: #fff;
+      }
+    }
+
+    .courses {
+      width: 100%;
+      height: auto;
+      @include m.flex(
+        $direction: column,
+        $align: flex-start,
+        $justify: flex-start
+      );
+      gap: 1.2rem;
+
+      .title {
+        font-family: "Montserrat", "sans-serif";
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      &-list {
+        width: 100%;
+        height: auto;
+        @include m.flex($direction: column, $align: flex-start);
+        gap: 0.4rem;
+
+        &-link {
+          text-decoration: none;
+          color: #fff;
+
+          &::after {
+            content: "";
+            margin-top: 0.2rem;
+            display: block;
+            width: 0;
+            height: 0.15rem;
+            background-color: v.$dark-red;
+            transition: all 0.6s ease-in-out;
+            bottom: 0;
+          }
+
+          &:hover {
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .contact {
+      width: 100%;
+      height: auto;
+      @include m.flex($direction: column, $align: flex-start);
+      gap: 1.2rem;
+
+      .title {
+        color: #fff;
+        font-family: "Montserrat", "sans-serif";
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      &-list {
+        width: 100%;
+        height: auto;
+        @include m.flex($direction: column, $align: flex-start);
+        gap: 1.1rem;
+
+        .item {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-template-rows: repeat(2, auto);
+          grid-template-areas:
+            "icon subtitle"
+            "text text";
+          align-items: center;
+          gap: 0.2rem 0.4rem;
+
+          .material-symbols-rounded {
+            grid-area: icon;
+            font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+            color: v.$dark-red;
+          }
+
+          .subtitle {
+            grid-area: subtitle;
+            font-weight: 700;
+            color: #fff;
+          }
+
+          .text {
+            grid-area: text;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &-line {
+    background-color: #fff;
+    width: 100%;
+    height: 0.05rem;
+  }
+
+  &-copyright {
+    width: 100%;
+    height: auto;
+    @include m.flex($justify: space-between);
+    padding: 0 5.6rem;
+
+    span {
+      color: #fff;
+      font-weight: 600;
+      
+      .symbol {
+        font-weight: 800;
+        
+      }
+    }
+  }
+}
