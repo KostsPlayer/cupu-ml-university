@@ -20,25 +20,25 @@ function Footer() {
           <div className="courses">
             <div className="title">Courses</div>
             <div className="courses-list">
-              <Link to={"/"} className="courses-list-link">
+              <Link to={"/other-ui-piii"} className="courses-list-link">
                 Business Management
               </Link>
-              <Link to={"/"} className="courses-list-link">
+              <Link to={"/other-ui-piii"} className="courses-list-link">
                 Arts Humanities
               </Link>
-              <Link to={"/"} className="courses-list-link">
+              <Link to={"/other-ui-piii"} className="courses-list-link">
                 Mathematics for Teaching
               </Link>
-              <Link to={"/"} className="courses-list-link">
+              <Link to={"/other-ui-piii"} className="courses-list-link">
                 Life Sciences & Medicine
               </Link>
-              <Link to={"/"} className="courses-list-link">
+              <Link to={"/other-ui-piii"} className="courses-list-link">
                 Natural Sciences
               </Link>
-              <Link to={"/"} className="courses-list-link">
+              <Link to={"/other-ui-piii"} className="courses-list-link">
                 Master of Business
               </Link>
-              <Link to={"/"} className="courses-list-link">
+              <Link to={"/other-ui-piii"} className="courses-list-link">
                 Applied Mathematics
               </Link>
             </div>

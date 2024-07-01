@@ -15,9 +15,9 @@ function Navbar() {
         <div className="navbar-logo">Cupu ML University</div>
         <div className="navbar-list">
           <Link
-            to="/"
-            className={`link ${active === "/" ? "active" : ""}`}
-            onClick={() => handleActive("/")}
+            to="/other-ui-piii"
+            className={`link ${active === "/other-ui-piii" ? "active" : ""}`}
+            onClick={() => handleActive("/other-ui-piii")}
           >
             Home
           </Link>
