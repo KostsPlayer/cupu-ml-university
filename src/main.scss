@@ -6,6 +6,7 @@
 @use "./pages/Home/About/about";
 @use "./pages/Home/Advantage/advantage";
 @use "./pages/Home/Courses/courses";
+@use "./pages/Login/login";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap&family=Patua+One");
 
@@ -14,7 +15,9 @@ body {
   overflow-x: hidden;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;

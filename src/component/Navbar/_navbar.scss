@@ -3,13 +3,37 @@
 
 .navbar {
   width: 100%;
-  height: 9.4rem;
   @include m.flex($direction: column, $justify: flex-start);
-  padding-top: 1.8rem;
-  gap: 0.8rem;
+  padding: 1.8rem 0;
+  row-gap: 0.8rem;
+  position: relative;
 
   &-logo {
     @include m.logo();
+    @include m.flex();
+  }
+
+  &-auth {
+    border: 0.12rem solid rgba($color: v.$light-red, $alpha: 0.8);
+    color: v.$light-red;
+    position: absolute;
+    top: 34%;
+    right: 2.5%;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.35rem 1.1rem;
+    @include m.flex($justify: flex-end);
+    letter-spacing: 0.08rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      background-color: rgba($color: v.$light-red, $alpha: 0.8);
+      color: #fff;
+    }
   }
 
   &-list {
@@ -30,7 +54,7 @@
       &::after {
         content: "";
         display: block;
-        margin-top: .2rem;
+        margin-top: 0.2rem;
         width: 100%;
         height: 0.125rem;
         background-color: v.$dark-red;
